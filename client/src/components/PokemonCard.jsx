@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import "./style.scss"
 
 function PokemonCard({ name, url }) {
 
@@ -35,15 +36,12 @@ loadimg()
   const updatedName = name.charAt(0).toUpperCase() + name.slice(1)
 
   return (
-    <div>
-  
-      <img src={info} />
-      <h2>{updatedName}</h2>
+    <div className='card'>
+      <img className='card__img' src={info} />
+      <h2 className='card__name'>{updatedName}</h2>
       <div className="container">
-        {pokemon?.types.map(({ type: { name } }) => <button>{name}</button>)}
+        {pokemon?.types.map(({ type: { name } }) => <button className='container__info'>{name}</button>)}
       </div>
-
-
     </div>
   );
 }

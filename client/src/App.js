@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PokemonCard from './components/PokemonCard';
-
-const api_base = 'http://pokeapi.co/api/v2/pokemon?limit=5&offset=0';
+import "./app.scss"
 
 function App() {
  
