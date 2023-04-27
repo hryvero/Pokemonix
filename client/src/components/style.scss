@@ -1,5 +1,6 @@
 .card{
   width: 40%;
+  padding-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,7 +17,52 @@
   }
 }
 .container{
-  &__info{
-    background-color: red;
-  }
+  display: flex;
+  column-gap: 10px;
+}
+button{
+  color:white;
+  font-size: 16px;
+  width: 100%;
+}
+
+.fire{
+ 
+  background-color: rgb(180, 0, 0);
+}
+.water{
+  background-color: rgb(1, 1, 182);
+}
+.grass{
+  background-color: green;
+}
+.poison{
+  color: #000;
+  background-color: yellow;
+}
+.bug{
+  background-color: orange;
+}
+.flying{
+  color: #000;
+  background-color: aquamarine;
+}
+.normal{
+  background-color: beige;
+  color: #000;
+}
+.fighting{
+  background-color: cornflowerblue;
+}
+.physic{
+  background-color: pink;
+}
+.ground{
+  background-color: brown;
+}
+.fairy{
+  background-color: greenyellow;
+}
+.electric{
+  background-color: orangered;
 }
