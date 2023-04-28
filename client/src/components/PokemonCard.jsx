@@ -32,6 +32,12 @@ function PokemonCard({ name, url }) {
       setInfo(imageUrl)
     })
   }
+  
+  const hancleCardClick = async () => {
+      setOpen(true)
+    }
+  
+  // onClick={setOpen(true)}
 
   console.log("pokemon", pokemon);
   console.log("info", info);
@@ -39,19 +45,19 @@ function PokemonCard({ name, url }) {
   const updatedName = name.charAt(0).toUpperCase() + name.slice(1)
 
     return (
-      <div className='card' onClick={setOpen(true)} >
+      <div className='card'  >
         
         <img className='card__img' src={info} />
         <h2 className='card__name'>{updatedName}</h2>
         <div className="container">
-          <button className={pokemon.type}>{pokemon?.type}</button>
-          {setOpen?  <tbody>
+          <button className={pokemon?.type}>{pokemon?.type}</button>
+          {/* {setOpen?  <tbody>
         <tr>
             <td>Weight</td>
-            <td>{pokemon.weight}</td>
+            <td>{pokemon?.weight}</td>
         </tr>
     </tbody>
-    :null }
+    :null } */}
         </div>
       </div>
     );
