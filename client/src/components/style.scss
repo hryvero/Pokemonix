@@ -1,6 +1,6 @@
 .card{
   width: 40%;
-  padding-bottom: 5px;
+  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,12 @@ button{
   color:white;
   font-size: 16px;
   width: 100%;
+}
+table, th, td{
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
 }
 
 .fire{

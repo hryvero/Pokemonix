@@ -2,14 +2,14 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import PokemonCard from './components/PokemonCard';
 import "./app.scss"
-// import Pagination from './components/Pagination';
+
 
 function App() {
  
   const [pokemonData, setPokemonData] = useState([]);
-  const [limit, setLimit]=useState(12)
-  // const [currentPage, setCurrentPage]=useState(1)
-  // const [pokemonsPerPage]=useState(12)
+  let [limit, setLimit]=useState(12)
+  const [open, setOpen] = useState(null)
+
 
  
   useEffect(() => {
@@ -28,17 +28,17 @@ function App() {
 
  const handleClick=(e)=>{
   e.stopPropagation();
-  setLimit(20)
+  setLimit(limit+=12)
 
  }
+ const handleOpen = (name) => {
+  if(open === name) {
+      setOpen(null);
+  } else {
+      setOpen(name);
+  }
+ }
 
-
-
-// const lastPokemonIndex=currentPage*pokemonsPerPage;
-// const firstPokemonIndex=lastPokemonIndex-currentPage
-// const curentPokemon=pokemonData.slice(firstPokemonIndex,lastPokemonIndex)
-
-// const paginate=pageNumber=>setCurrentPage(pageNumber)
 
   return (
     <div className="App">
@@ -46,10 +46,9 @@ function App() {
     <div className='content'>
       
       {pokemonData.map((item) =>
-        <PokemonCard  {...item} />
+        <PokemonCard   {...item} open={item.name === open} handleOpen={() => handleOpen(item.name)}/>
       )}
-      <button onClick={handleClick}>Load more</button>
-      {/* <Pagination pokemonsPerPage={pokemonsPerPage} pokemonData={pokemonData.length} paginate={paginate}/> */}
+      <button className='content__loading' onClick={handleClick}>Load more</button>
     </div>
     </div>
   );
