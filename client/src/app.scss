@@ -1,4 +1,4 @@
-.App{
+.content{
   display: flex;
   margin: 0 auto;
   justify-content: center;
@@ -7,6 +7,9 @@
   max-width: 680px;
   box-sizing: border-box;
   color: black;
+}
+h1{
+  text-align: center;
 }
 .page-link{
   color: black;

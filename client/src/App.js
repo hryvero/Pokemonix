@@ -42,11 +42,15 @@ function App() {
 
   return (
     <div className="App">
+    <h1>Pokedex</h1>
+    <div className='content'>
+      
       {pokemonData.map((item) =>
         <PokemonCard  {...item} />
       )}
       <button onClick={handleClick}>Load more</button>
       {/* <Pagination pokemonsPerPage={pokemonsPerPage} pokemonData={pokemonData.length} paginate={paginate}/> */}
+    </div>
     </div>
   );
 }
