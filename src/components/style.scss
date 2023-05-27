@@ -7,6 +7,7 @@
   flex-direction: column;
   border: 1px gray solid;
   gap: 10px;
+  cursor: pointer;
   &__img{
     width: 80%; 
   }
@@ -16,12 +17,17 @@
     font-weight: bold
   }
 }
+.content__loading{
+  width: 50%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
 .container{
   display: flex;
   column-gap: 10px;
 }
 button{
-  color:white;
+  color: black;
   font-size: 16px;
   width: 100%;
 }
@@ -38,9 +44,11 @@ table, th, td{
 }
 .water{
   background-color: rgb(1, 1, 182);
+  color: white;
 }
 .grass{
   background-color: green;
+  color: white;
 }
 .poison{
   color: #000;
